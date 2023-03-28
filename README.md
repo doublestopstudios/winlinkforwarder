@@ -14,6 +14,8 @@ Winlink Forwarder is the solution to the question of how to get radio emails int
 4. Leave the script running, and maintain an active internet connection.
 5. When the script is no longer needed, simply close the console window.
 
-Once Winlink receives a message, Winlink Forwarder will detect this message and strip the information to form an email. The email will be sent FROM your email address, TO your email address: as if you sent yourself an email.
+NOTE: You must register an "app password" with your email address (as well as enable two-step verification). Otherwise, you will get authentication errors.
 
-NOTE: You must register an "app password" with your email address (as well as enable two-step verification). 
+IMPORTANT: Due to the way Winlink handles newlines, you must use the character '&&' to denote newlines for the resulting email to contain them. The reason for this, is that Winlink's message editor inserts a newline at word wrap, rather than only inserting newlines when the Enter/Return key is pressed. Thus, the size of your screen dictates where newlines will be inserted. Winlink Forwarder attempts to solve this problem by blanketly removing all newlines and requiring the use of the '&&' token for newlines. Simply put, if you want your email to contain newlines, you must use '&&' when typing your message in Winlink. This will have the exact same effect as '<br>' in HTML: the characters will automatically be detected and replaced with a newline character. 
+
+
